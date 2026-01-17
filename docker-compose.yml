@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  rstudio:
+    build: .
+    ports:
+      - "8787:8787"
+    environment:
+      - PASSWORD=${RSTUDIO_PASSWORD}
+      - DISABLE_AUTH=false
+    volumes:
+      - ./tmp:/home/rstudio/tmp
+      - claude-credentials:/home/rstudio/.claude
+    restart: unless-stopped
+
+volumes:
+  claude-credentials:
