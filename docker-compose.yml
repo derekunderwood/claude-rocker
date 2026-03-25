@@ -10,6 +10,8 @@ services:
       - DISABLE_AUTH=false
     volumes:
       - ./tmp:/home/rstudio/tmp
+      - ~/.gitconfig:/home/rstudio/.gitconfig:ro
+      - ~/.ssh:/home/rstudio/.ssh:ro
       - claude-credentials:/home/rstudio/.claude
     restart: unless-stopped
 
