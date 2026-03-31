@@ -1,0 +1,41 @@
+{
+    "editor_theme": "Tomorrow Night",
+    "font_size_points": 11,
+    "posix_terminal_shell": "bash",
+    "panes": {
+        "quadrants": [
+            "Source",
+            "TabSet1",
+            "Console",
+            "TabSet2"
+        ],
+        "tabSet1": [
+            "History",
+            "Presentation"
+        ],
+        "tabSet2": [
+            "Files",
+            "Environment",
+            "Plots",
+            "Connections",
+            "Packages",
+            "Help",
+            "VCS",
+            "Viewer",
+            "Presentations"
+        ],
+        "hiddenTabSet": [
+            "Build",
+            "Tutorial"
+        ],
+        "console_left_on_top": false,
+        "console_right_on_top": true,
+        "additional_source_columns": 0,
+        "sidebar": [
+            "Chat"
+        ],
+        "sidebar_visible": false,
+        "sidebar_location": "right"
+    },
+    "initial_working_directory": "~"
+}

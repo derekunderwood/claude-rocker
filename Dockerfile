@@ -33,12 +33,8 @@ RUN npm install -g @anthropic-ai/claude-code
 RUN mkdir -p /home/rstudio/.claude
 
 # Set RStudio theme and preferences
-RUN mkdir -p /home/rstudio/.config/rstudio && \
-    echo '{\n\
-    "editor_theme": "Tomorrow Night",\n\
-    "font_size_points": 11,\n\
-    "posix_terminal_shell": "bash"\n\
-}' > /home/rstudio/.config/rstudio/rstudio-prefs.json
+RUN mkdir -p /home/rstudio/.config/rstudio
+COPY rstudio-prefs.json /home/rstudio/.config/rstudio/rstudio-prefs.json
 
 # Switch back to root for container startup
 USER root
