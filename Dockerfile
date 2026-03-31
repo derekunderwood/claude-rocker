@@ -8,7 +8,10 @@ RUN apt-get update && apt-get install -y \
     ca-certificates \
     openssh-client \
     gnupg \
+    r-cran-littler \
     && rm -rf /var/lib/apt/lists/*
+
+RUN install2.r --error devtools pak
 
 # Install Node.js
 RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
