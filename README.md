@@ -13,4 +13,7 @@ docker-compose down
 
 # Rebuild after Dockerfile changes
 docker-compose up -d --build
+
+# Attach shell to container Rstudio terminal 
+docker exec -it -u rstudio my_rstudio_container bash
 ```
